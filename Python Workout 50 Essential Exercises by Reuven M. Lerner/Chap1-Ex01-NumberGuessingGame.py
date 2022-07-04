@@ -11,10 +11,11 @@ from random import randint as rd
 
 # Function
 def guessing_game():
-    random_number = rd(1, 101) # Random number in range [1, 100]
-    guess = 0
-    while guess != random_number:
-        guess = int(input('Guess it: '))
+    random_number = rd(0, 101) # Random number in range [0, 100]
+    name = input('Enter your name: ')
+    print(f'Hello, {name}!')
+    
+    while guess := int(input('Guess it: ')):
         if guess > random_number:
             print('Too high. Try again!')
             continue
@@ -24,3 +25,6 @@ def guessing_game():
         else:
             print(f'Just right. The number is {guess}')
             return
+
+# Run
+guessing_game()
